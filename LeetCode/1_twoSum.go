@@ -4,22 +4,18 @@ import "fmt"
 
 func twoSum(nums []int, target int) []int {
 	var result = make([]int, 0, 2)
-	var isFound bool = false
+	var m = map[int]int{}
 
 	for i := 0; i < len(nums); i++ {
-		for j := i; j < len(nums); j++ {
-			if j == i {
-				continue
-			}
-			if nums[i]+nums[j] == target {
-				result = append(result, i, j)
-				isFound = true
-				break
-			}
-		}
-		if isFound {
+		leftValue := target - nums[i]
+
+		if _, isFound := m[leftValue]; isFound {
+			// if found -> then
+			result = append(result, m[leftValue], i)
 			break
 		}
+
+		m[nums[i]] = i
 	}
 
 	return result
