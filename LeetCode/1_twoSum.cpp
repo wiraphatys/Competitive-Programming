@@ -5,19 +5,17 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> result;
+        map<int, int> m;
 
-        bool isFound = false;
         for (size_t i = 0; i < nums.size(); ++i) {
-            for (size_t j = i; j < nums.size(); ++j) {
-                if (i == j) continue;
-                if (nums[i] + nums[j] == target) {
-                    result.push_back(i);
-                    result.push_back(j);
-                    isFound = true;
-                    break;
-                }
+            int leftValue = target - nums[i];
+
+            if (m.find(leftValue) != m.end()) {
+                result.push_back(m[leftValue]);
+                result.push_back(i);
+                break;
             }
-            if (isFound) break;
+            m.insert(make_pair(nums[i], i));
         }
 
         return result;

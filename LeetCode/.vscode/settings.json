@@ -1,3 +1,14 @@
 {
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.ejs": "html",
+        "functional": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "regex": "cpp",
+        "version": "cpp",
+        "map": "cpp"
+    }
 }
