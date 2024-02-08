@@ -9,6 +9,7 @@
         "random": "cpp",
         "regex": "cpp",
         "version": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "ostream": "cpp"
     }
 }
