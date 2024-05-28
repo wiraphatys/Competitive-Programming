@@ -13,8 +13,8 @@ public:
                 str += c;
             }
         }
-        cout << "str: " << str << endl;
 
+        // execute validate palindrome
         string::iterator left = str.begin();
         string::iterator right = str.end()-1;
 
@@ -31,7 +31,9 @@ public:
 };
 
 int main() {
-    Solution s;
-    cout << s.isPalindrome("A man, a plan, a canal: Panama") << endl;
+    string s;
+    cin >> s;
+    Solution sol;
+    cout << sol.isPalindrome(s) << endl;
     return 0;
 }
